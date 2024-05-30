@@ -22,11 +22,11 @@ function rotateImage(event) {
 
 const gridContainer = document.getElementById('gridContainer');
 let imageURLs = [
-  '/assets/game-zombie.png', 
-  '/assets/game-zombie.png', 
-  '/assets/game-zombie.png', 
-  '/assets/game-zombie.png', 
-  '/assets/game-zombie.png'
+  'assets/game-zombie.png', 
+  'assets/game-zombie.png', 
+  'assets/game-zombie.png', 
+  'assets/game-zombie.png', 
+  'assets/game-zombie.png'
 ];
 
 function createGrid(container) {
@@ -84,8 +84,8 @@ function handleImageClick(event) {
 }
 
 //verander de images naar target en van target terug naar zombies
-const targetPng = '/assets/target.png';
-const zombiePng = '/assets/game-zombie.png';
+const targetPng = 'assets/target.png';
+const zombiePng = 'assets/game-zombie.png';
 // const shotEffect = '/assets/shot-effect.png';
 
 
