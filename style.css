@@ -1,0 +1,150 @@
+.shooter-image {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  text-align: center;
+}
+
+#image {
+  position: relative;
+  width: 125px; 
+  height: 125px;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #248639;
+  cursor: crosshair;
+  caret-color: aliceblue;
+}
+.grid-container {
+  position: absolute;
+  display: grid;
+  grid-template-columns: repeat(9, 150px);
+  grid-template-rows: repeat(4, 150px);
+  gap: 40px;
+  top: 10px;
+}
+
+.grid-item {
+  background-color: #796114;
+  border: 1px solid #ccc;
+  padding: 20px;
+  align-items: center;
+}
+
+.grid-item img {
+  max-width: 60%;
+  transform: translate(var(--x-position), var(--y-position)) scale(0.75);
+  -webkit-user-drag: none;
+
+}
+
+#change-target{
+  position: fixed;
+  bottom: 20px;
+  left: 0;
+  margin: 10px;
+  padding: 10px 20px;
+  background-color: #ffe600;
+  color: rgb(0, 0, 0);
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#score {
+  position: fixed;
+  top: 0;
+  right: 0;
+  margin: 10px;
+  padding: 10px 20px;
+  color: #000000;
+}
+#high-score{
+  position: fixed;
+  top: 50px;
+  right: 0;
+  margin: 10px;
+  padding: 10px 20px;
+  color: #000000;
+}
+
+#timer-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  font-size: 2em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 1000;
+}
+
+#timer-overlay button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 1em;
+  cursor: pointer;
+  position: relative;
+  top: 10%;
+}
+
+#start-game-button {
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin: 10px;
+  padding: 10px 20px;
+  background-color: #007BFF;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  height: 100px;
+  width: 200px;
+  font-size: larger;
+}
+
+#start-overlay{
+  position: absolute;
+  top: 0;
+  width: 70%;
+  height: 65%;
+  background-color: #248639;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  z-index: 1000;
+
+}
+
+#health-bar {
+  width: 100vw;
+  height: 20px;
+  background: red;
+  position: relative;
+  animation: mymove 20s;
+  animation-play-state: paused;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+ 
+@keyframes mymove {
+  from {width: 0%;}
+  to {width: 100%;}
+}
